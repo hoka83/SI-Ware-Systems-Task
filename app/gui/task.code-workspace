@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": ".terraform",
+			"path": "../../../tst/.terraform"
+		},
+		{
+			"name": "devops_test",
+			"path": "../../../tst/devops_test"
+		}
+	]
+}

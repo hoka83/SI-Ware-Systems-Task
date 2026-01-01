@@ -1,0 +1,91 @@
+
+# Application Configuration
+
+
+app:
+  name: Production Line Monitoring System
+  refresh_rate_ms: 500   # GUI update rate (2 times per second)
+
+
+# TCP Connection Settings
+
+
+connection:
+  protocol: tcp
+  host: "127.0.0.1"
+  port: 9999
+  timeout_sec: 5
+
+
+# Sensor Definitions
+
+
+sensors:
+  - name: Temp_1
+    type: temperature
+    unit: "°C"
+    limits:
+      low: 20
+      high: 80
+
+  - name: Temp_2
+    type: temperature
+    unit: "°C"
+    limits:
+      low: 20
+      high: 80
+
+  - name: Pressure_1
+    type: pressure
+    unit: "bar"
+    limits:
+      low: 1
+      high: 10
+
+  - name: Speed_1
+    type: speed
+    unit: "rpm"
+    limits:
+      low: 500
+      high: 1500
+
+  - name: Vibration_1
+    type: vibration
+    unit: "mm/s"
+    limits:
+      low: 0.1
+      high: 5.0
+
+
+# Alarm Configuration
+
+
+alarms:
+  enable: true
+  severity_levels:
+    low: warning
+    high: critical
+  log_to_file: true
+
+
+# Notification Settings
+
+
+notifications:
+  desktop:
+    enabled: true
+
+  email:
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    sender: "alerts@example.com"
+    receiver: "anahoka586@gmail.com"
+
+
+# Maintenance Console (Bonus)
+ 
+
+maintenance:
+  enabled: true
+  password: "admin123"
